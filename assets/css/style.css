@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    overflow-x: hidden !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Poppins;
+}
+p,a{
+    font-family: Poppins;  
+}
+.landing{
+    width: 100vw;
+}
+.landing-left{
+    float: left;
+    height: 100vh;
+    background-color: #ECFCFF;
+}
+.nav-lg{
+    display: inline-flex;
+}
+.lg-nav-left img{
+    flex: 3;
+    float: left;
+    margin-top: 1rem;
+    margin-left: 3rem;
+    width: 300px;
+}
+.lg-nav-right{
+    flex:9;
+    float: right;
+    margin-top: 5.5rem !important;
+}
+.lg-nav-right ul li{
+    float: left;
+    font-size:18px;
+    font-weight: 600;
+    color: #363636;
+    padding: .25rem 1rem;
+    list-style: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.lg-nav-right ul li:hover{
+    transform: translateY(-5px); 
+    color: #F58220;
+}
+.lg-nav-right ul .active{
+    color: #fff !important;
+    border-radius: 50px;
+    background: #F58220;
+}
+.nav-line{
+    width: 100%;
+    background:rgba(41, 66, 118, 0.12);
+    height: 1px;
+    margin-top: -1rem;
+    margin-left: 5px;
+    float: left;
+}
+.landing-right{
+    margin-left: -1rem;
+}
+.landing-right-bg{
+    width: auto;
+    height: 100vh;
+}
+.landing-text-body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.vector-1 {
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    width: 200px;
+    height: 200px; /* Set height to maintain aspect ratio */
+    background: url(/assets/images/vectors/vector-1.png) no-repeat center center;
+    background-size: contain;
+}
+
+.vector-2 {
+    position: absolute;
+    bottom: 30%;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: url(/assets/images/vectors/Vector-2.png) no-repeat center center;
+    background-size: contain;
+}
+
+.vector-3 {
+    position: absolute;
+    top: 5%;
+    right: -6%;
+    width: 200px;
+    height: 200px;
+    background: url(/assets/images/vectors/vector\ -3.png) no-repeat center center;
+    background-size: contain;
+}
+
+.vector-4 {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    background: url(/assets/images/vectors/Vector-4.png) no-repeat center center;
+    background-size: contain;
+}
+
+.vector-5 {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background: url(/assets/images/vectors/Vector-5.png) no-repeat center center;
+    background-size: contain;
+}
+.hand-img{
+    position: absolute;
+    top: 49%;
+    left: 72%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    width: 800px;
+    height: 400px;
+    background: url(/assets/images/base/tablet\ in\ hand\ 1.png) no-repeat center center;
+    background-size: contain;
+}
+.vector-1,
+.vector-2,
+.vector-3,
+.vector-4,
+.vector-5 {
+    transform: translate(-5%, -5%);
+    animation: move 3s infinite alternate;
+}
+.vector-2 {
+    animation-delay: 0.5s; /* Small delay between each animation */
+}
+.vector-3 {
+    animation-delay: 1s;
+}
+.vector-4 {
+    animation-delay: 1.5s;
+}
+.vector-5 {
+    animation-delay: 2s;
+}
+@keyframes move {
+    from {
+        transform: translate(-10%, -10%) translateY(0);
+    }
+    to {
+        transform: translate(-10%, -10%) translateY(-10px);
+    }
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.slide-text {
+    flex: 0 0 100%; /* Each slide takes the full width */
+    position: relative;
+    padding: 20px;
+    transition: transform 0.5s ease-in-out;
+    left: 25%;
+    top: 10%;
+}
+
+.slide-text .slider-title {
+    color: rgba(41, 66, 118, 1);
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.slide-text p {
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 300;
+    width: 600px;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+}
+
+.slide-text a {
+    padding: 10px 20px;
+    text-decoration: none;
+    background: rgba(35, 215, 255, 1);
+    border-radius: 10px;
+    color: rgba(7, 0, 0, 1);
+    font-weight: 400;
+}
+
+.slide-text a:hover {
+    color: rgb(255, 255, 255);
+}
+.navigation-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(35, 215, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: rgba(35, 215, 255, 1);
+}
+.section-2{
+    height: 200vh;
+    background-image: radial-gradient(rgba(235, 235, 235, 1) 15%, transparent 0);
+    background-size: 20px 20px;
+}
+.home-about{
+    padding: 3rem 13rem !important;
+}
+.home-about-left{
+    position: relative;
+    background: rgba(41, 66, 118, 1);
+    height: 700px;
+    border-top-left-radius:180px ;
+}
+.about-vector img{
+    position: absolute;
+   left: 60%;
+   top: 8%;
+   height: 320px;  
+}
+.about-text-div{
+    padding-left: 3rem;
+}
+.about-text-div h2{
+    color: rgba(35, 215, 255, 1);
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 8rem;
+}
+.about-text-div h1{
+    color: rgba(255, 255, 255, 1);
+    font-size: 43px;
+    font-weight: 600;
+    line-height: 65px;
+    margin-top: 1.5rem;
+}
+.about-text-div p{
+    color: rgba(255, 255, 255, 1);
+    font-size: 17px;
+    width: 90%;
+    margin-top: 2rem;
+    font-weight: 300;
+}
+.home-conuter-div{
+    margin-left: 3rem;
+}
+.counter-body{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.counter-body h1{
+    color: #F58220;
+    font-size: 60px;
+    font-weight: 600;
+}
+.counter-body h3{
+    color: rgba(41, 66, 118, 1);
+    font-size: 35px;
+    line-height: 45px;
+    font-weight: 600;
+}
+.counetr-line{
+    background: rgba(217, 217, 217, 1);
+    width: 300px;
+    height: 2px;
+}
