@@ -126,15 +126,13 @@ p,a{
     
     background-size: contain;
 }
-.hand-img{
+.hand-img img{
     position: absolute;
-    top: 49%;
+    bottom: -5%;
     left: 72%;
     transform: translateX(-50%);
     z-index: 10000;
-    width: 800px;
-    height: 400px;
-    
+    width: 600px;
     background-size: contain;
 }
 .vector-1,
