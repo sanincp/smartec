@@ -78,7 +78,7 @@ p,a{
 }
 .vector-1 {
     position: absolute;
-    top: 10%;
+    top: 0%;
     left: 0%;
     width: 200px;
     height: 200px; /* Set height to maintain aspect ratio */
@@ -88,14 +88,15 @@ p,a{
 
 .vector-2 {
     position: absolute;
-    bottom: 30%;
+    top: 25%;
     left: 0%;
-    width: 200px;
-    height: 200px;
-    
+    width: 50px !important;
+    height: 50px !important;
     background-size: contain;
 }
-
+.vector-2 img{
+    width: 250px !important;
+}
 .vector-3 {
     position: absolute;
     top: 5%;
@@ -135,34 +136,68 @@ p,a{
     width: 600px;
     background-size: contain;
 }
-.vector-1,
-.vector-2,
-.vector-3,
-.vector-4,
-.vector-5 {
-    transform: translate(-5%, -5%);
-    animation: move 3s infinite alternate;
+/* Keyframes for random movement and slow rotation for each vector */
+@keyframes move-random-1 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-15px, 10px) rotate(3deg); }
+    50% { transform: translate(10px, -5px) rotate(-3deg); }
+    75% { transform: translate(-10px, 15px) rotate(5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
 }
+
+@keyframes move-random-2 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, -20px) rotate(4deg); }
+    50% { transform: translate(-10px, 5px) rotate(-4deg); }
+    75% { transform: translate(15px, 10px) rotate(6deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes move-random-3 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(-5px, 10px) rotate(2deg); }
+    50% { transform: translate(15px, -10px) rotate(-5deg); }
+    75% { transform: translate(-10px, 5px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes move-random-4 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(20px, -15px) rotate(6deg); }
+    50% { transform: translate(-15px, 5px) rotate(-2deg); }
+    75% { transform: translate(10px, 10px) rotate(4deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes move-random-5 {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(15px, -10px) rotate(5deg); }
+    50% { transform: translate(-5px, 5px) rotate(-4deg); }
+    75% { transform: translate(20px, 15px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Apply the animations to each vector with unique timings and speeds */
+.vector-1 {
+    animation: move-random-1 6s infinite alternate ease-in-out;
+}
+
 .vector-2 {
-    animation-delay: 0.5s; /* Small delay between each animation */
+    animation: move-random-2 7s infinite alternate ease-in-out;
 }
+
 .vector-3 {
-    animation-delay: 1s;
+    animation: move-random-3 5s infinite alternate ease-in-out;
 }
+
 .vector-4 {
-    animation-delay: .5s;
+    animation: move-random-4 8s infinite alternate ease-in-out;
 }
+
 .vector-5 {
-    animation-delay: 1s;
+    animation: move-random-5 7.5s infinite alternate ease-in-out;
 }
-@keyframes move {
-    from {
-        transform: translate(-10%, -10%) translateY(0);
-    }
-    to {
-        transform: translate(-50%, -50%) translateY(-10px);
-    }
-}
+
 
 .slider {
     display: flex;
@@ -175,7 +210,7 @@ p,a{
     flex: 0 0 100%; /* Each slide takes the full width */
     position: relative;
     padding: 20px;
-    transition: transform 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
     left: 25%;
     top: 10%;
 }
@@ -377,6 +412,16 @@ p,a{
     font-weight: 300;
     text-align: center;
 }
+.slider-container {
+    width: 85%;
+    margin: auto;
+    position: relative;
+}
+.outer-ser-card{
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
+}
 .outer-ser-card{
     width: 350px !important;
     padding: 0 !important;
@@ -397,31 +442,34 @@ p,a{
     margin-left: 3rem !important;
 }
 .home-ser-card-text-div img{
-    width: 60px;
+    width: 60px !important;
     float: left;
     margin-right: 1rem;
 }
 .home-ser-card-text-div p{
     text-align: left;
 }
+/* Custom Dot Navigation */
 .dot-nav {
     text-align: center;
-    margin-top: 1rem !important;
-    margin-bottom: 2rem;
-  }
-  
-  .dot {
-    width: 18px;
-    height: 18px;
-    background-color: #d9d9d9;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background: #bbb;
     border-radius: 50%;
+    display: inline-block;
+    margin: 5px;
+    transition: 0.3s ease-in-out;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .dot.active {
-    background-color: #23cef6;
-  }
+}
+
+.dot.active {
+    background: #007bff;
+    transform: scale(1.3);
+}
   .control-section{
     height: 100%;
     background: #294276;
@@ -498,20 +546,26 @@ p,a{
     font-weight: 300;
     text-align: center;
 }
+.pro-slider{
+    padding: 1rem 5rem;
+    
+}
 .product-div-container{
+    width: 90%;
     background: #eefcff;
     border-radius: 40px;
     height: fit-content;
-    padding: 2rem 6%;
-    margin: 1rem 8rem;
-    
+    margin: 1rem 3rem;
     border: 1px solid #91e6fa;
 }
 .home-pro-card{
-    padding: 0 1.5rem !important;
+    flex: 1;
+    border-right:solid 1px #23cef6 ;
+    margin: 0 20px;
 }
 .home-pro-card img{
-    width: 150px;
+    width: 200px !important;
+    padding-right: 1rem !important;
 }
 .home-pro-card h3{
     font-size: 25px;
@@ -528,6 +582,41 @@ p,a{
     color: #23cef6;
     text-decoration: none;
 }
+/* Ensure container is properly positioned */
+.product-div-container {
+    position: relative;
+}
+
+/* Position navigation buttons inside container */
+.pro-prev, .pro-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #23cef6;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    pointer-events: all; /* Make sure buttons are clickable */
+    transition: 0.3s;
+    z-index: 10; /* Ensure buttons are above other elements */
+}
+
+.pro-prev:hover, .pro-next:hover {
+    background: #0056b3;
+}
+
+/* Positioning the prev and next buttons inside */
+.pro-prev {
+    left: 20px; /* Adjust if needed */
+}
+
+.pro-next {
+    right: 20px; /* Adjust if needed */
+}
+
 .project-container{
     padding: 2rem 9rem;
 }
@@ -572,28 +661,25 @@ p,a{
 .testimonial-section{
     background: rgba(245, 245, 245, 1);
 }
-.testimonial-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+
 .testimonial-card{
+    flex: 1;
     margin: 3rem 1rem;
     background: #fff;
     border-radius: 50px;
+    height: 250px;
     width: 400px !important;
-}
+  }
 .testimonial-card img{
     margin-top: 1.5rem;
     margin-left: 1rem;
-    width: 90px;
+    width: 90px !important;
     float: left;
 }
 .testimonial-card h3{
     font-weight: 600;
     margin-left: 8rem !important;
-    margin-top: 3rem;
+    padding-top: 3rem !important;
 }
 .testimonial-card ul{
     list-style: none;
@@ -769,3 +855,25 @@ footer{
     font-weight: 300;
     color: #d9d9d9;
 }
+
+.values-slider .owl-nav {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+  }
+  .values-slider .owl-nav .owl-prev {
+    float: left;
+  }
+  .values-slider .owl-nav .owl-prev span,
+  .values-slider .owl-nav .owl-next span {
+    color: #ff5a96;
+    font-size: 30px;
+    border-radius: 100%;
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+  }
+  .values-slider .owl-nav .owl-next {
+    float: right;
+  }
