@@ -7,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const handImages = [
       "assets/images/base/tablet in hand 1.png",
       "assets/images/base/remote in hand 2.png",
-      "assets/images/base/tablet in hand 3.png"
+      "assets/images/base/tablet in hand 1.png"
   ];
   const bgImages = [
       "assets/images/base/landing-right-bg.png",
       "assets/images/base/landing-right-bg-2.png",
-      "assets/images/base/landing-right-bg-3.png"
+      "assets/images/base/landing-right-bg.png"
   ];
   const totalSlides = slides.length;
 
@@ -48,3 +48,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // Show first slide on load
   showSlide(currentSlide);
 });
+const hamburger = document.querySelector(".jk-hamburger");
+const navMenu = document.querySelector(".jk-nav-menu");
+
+hamburger.addEventListener("click", () => {
+  /* Toggle active class */
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+
+  /* Toggle aria-expanded value */
+  let menuOpen = navMenu.classList.contains("active");
+  console.log(menuOpen);
+  let newMenuOpenStatus = menuOpen;
+  hamburger.setAttribute("aria-expanded", newMenuOpenStatus);
+});
+
+// Close mobile menu
+document.querySelectorAll(".jk-nav-link").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
+  // Toggle aria-expanded value here as well
+  hamburger.setAttribute("aria-expanded", false);
+}));
