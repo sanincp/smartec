@@ -1012,7 +1012,7 @@ footer{
         display: block !important;
     }
     .landing-left{
-        height: 45vh !important;
+        height:500px !important;
     }
     .vector-2 {
         display: none;
@@ -1085,17 +1085,21 @@ footer{
         background-size: contain;
     }
     .hand-img img{
-        width: 550px !important;
+        width: 450px !important;
     }
     .home-about{
         padding-left: 3rem;
         padding-right: 0rem;
+    }
+    .about-text-div{
+        padding-left: 1rem;
     }
     .about-text-div h2{
         font-size: 25px;
     }
     .about-text-div h1{
         font-size: 30px;
+        margin-top: 0;
         line-height: 40px;
     }
     .about-text-div p{
@@ -1123,7 +1127,7 @@ footer{
         rotate:0deg;
         position: relative;
         background: rgba(217, 217, 217, 1);
-        width: 2px !important;
+        width: 3px !important;
         height: 100px;
     }
     .q-right-div-sm{

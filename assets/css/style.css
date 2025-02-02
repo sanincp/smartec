@@ -1012,7 +1012,8 @@ footer{
         display: block !important;
     }
     .landing-left{
-        height: 45vh !important;
+
+        height: 100% !important;
     }
     .vector-2 {
         display: none;
@@ -1080,12 +1081,13 @@ footer{
         position: relative;
         top: 110% !important;
         left: 55%;
+        width: 100px !important;
         transform: translateX(-50%);
         z-index: 10000;
         background-size: contain;
     }
     .hand-img img{
-        width: 550px !important;
+        width: 100px !important;
     }
     .home-about{
         padding-left: 3rem;
