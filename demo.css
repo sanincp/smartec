@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,body {
     margin:0;
     padding:0;
@@ -16,6 +17,16 @@ h1,h2,h3,h4,h5,h6{
 }
 p,a{
     font-family: Poppins;  
+}
+.fade-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-down.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 .landing{
     overflow: hidden !important;
@@ -217,11 +228,12 @@ p,a{
     position: relative;
     padding: 20px;
     transition: opacity 1s ease-in-out;
-    left: 25%;
+    left: 10%;
     top: 10%;
 }
 
 .slide-text .slider-title {
+    width: 70%;
     color: rgba(41, 66, 118, 1);
     font-size: 50px;
     line-height: 70px;
@@ -291,7 +303,7 @@ p,a{
    height: 320px;  
 }
 .about-vector img {
-    animation: slowRotate 20s linear infinite;
+    animation: slowRotate 20s linear infinite, floatMove 5s ease-in-out infinite;
 }
 
 /* Rotation Animation */
@@ -300,7 +312,7 @@ p,a{
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(100deg);
+        transform: rotate(18deg);
     }
 }
 
@@ -448,10 +460,18 @@ p,a{
     border-radius: 55px;
     background: #ffffff;
     border: 1px solid rgba(35, 206, 246, 1);
-    margin: 2rem 2rem !important; 
+    margin: auto;
+    margin-top: 2rem;
+
+    height: 500px;
 }
 .home-ser-card img{
     width:100%;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+}
+.ser-card-icon{
+    float: left;
 }
 .home-ser-card-text-div{
    margin: 1rem .5rem -1rem 2rem;
@@ -463,7 +483,8 @@ p,a{
 }
 .home-ser-card-text-div img{
     width: 60px !important;
-    float: left;
+    float: left !important;
+    border-radius: 0px !important;
     margin-right: 1rem;
 }
 .home-ser-card-text-div p{
@@ -482,6 +503,7 @@ p,a{
     border-radius: 50%;
     display: inline-block;
     margin: 5px;
+    margin-top: 1rem;
     transition: 0.3s ease-in-out;
     cursor: pointer;
 }
@@ -581,7 +603,7 @@ p,a{
 .home-pro-card{
     flex: 1;
     border-right:solid 1px #23cef6 ;
-    margin: 0 20px;
+    padding: 0 20px;
 }
 .home-pro-card img{
     width: 200px !important;
@@ -673,6 +695,14 @@ p,a{
     margin-bottom: 2rem;
     height: 3px;
 }
+.certificate-card{
+    width: 300px !important;
+    padding: 0 !important;
+    background: #ffffff;
+    margin: auto;
+    margin-bottom: 2rem !important;
+    height: 100%;
+}
 .client-slider img{
     width: 80%;
     margin-top: 3rem;
@@ -684,7 +714,8 @@ p,a{
 
 .testimonial-card{
     flex: 1;
-    margin: 3rem 1rem;
+    margin: auto;
+    margin-bottom: 2rem;
     background: #fff;
     border-radius: 50px;
     height: 250px;
@@ -784,25 +815,45 @@ p,a{
     margin-bottom: 2rem;
     width: 80%;
     height: 60px;
+    outline: none;
+    padding-left: 2rem;
     border: 0px;
     border-radius: 15px;
 }
+.home-query-form input:focus{
+    border: 2px solid #0056b3 !important;
+}
+.phone {
+    padding-left: 3rem;
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield; /* Standard */
+}
+
+.phone::-webkit-outer-spin-button,
+.phone::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .home-query-form input::placeholder{
     font-size: 20px;
-    padding-left: 2rem;
     font-weight: 400;
 }
 .home-query-form textarea{
     height: 250px;
+    outline: none;
     margin-bottom: 2rem;
     width: 80%;
     border: 0px;
+    padding-left: 2rem;
+    padding-top: 1rem;
     border-radius: 15px;
+}
+.home-query-form textarea:focus{
+    border: 2px solid #0056b3 !important; 
 }
 .home-query-form textarea::placeholder{
     font-size: 20px;
-    padding-left: 2rem;
-    padding-top: 1rem;
+    
     font-weight: 400;
 }
 .btn-submit{
@@ -1025,8 +1076,9 @@ footer{
     .jk-container{
         display: block !important;
     }
-    .landing-left{
-        height:500px !important;
+    .landing-left {
+        height: 60vh !important;
+        
     }
     .vector-2 {
         display: none;
@@ -1071,6 +1123,7 @@ footer{
     }
     .slide-text .slider-title {
         font-size: 30px;
+        width: 90%;
         line-height: 40px;
         font-weight: 600;
     }
@@ -1124,7 +1177,8 @@ footer{
     }
     .home-conuter-div{
         display: flex;
-        margin-left: 0;
+        float: left;
+        margin-left: -1rem !important ;
     }
     .home-conuter-div h1{
         font-size: 35px;
@@ -1317,7 +1371,6 @@ footer{
         margin-bottom: .3rem;
         text-align: justify;
         font-size: 15px;
-        width: 100%;
         color: #363636;
     }
     .pro-prev, .pro-next {
@@ -1407,5 +1460,9 @@ footer{
         margin-left: 0;
         padding-bottom: 2rem;
         font-size: 18px;
+    }
+    .home-ser-card-text-div p{
+        text-align: justify;
+        
     }
   }

@@ -93,3 +93,20 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCounter();
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const elements = document.querySelectorAll(".fade-down");
+
+  function fadeOnScroll() {
+      elements.forEach(el => {
+          const elementTop = el.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight - 100) { // Adjust trigger point
+              el.classList.add("active");
+          }
+      });
+  }
+
+  window.addEventListener("scroll", fadeOnScroll);
+  fadeOnScroll(); // Run once on page load
+});
