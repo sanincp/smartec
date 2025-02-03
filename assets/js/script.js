@@ -70,3 +70,26 @@ document.querySelectorAll(".jk-nav-link").forEach(n => n.addEventListener("click
   // Toggle aria-expanded value here as well
   hamburger.setAttribute("aria-expanded", false);
 }));
+
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".counter");
+
+    counters.forEach(counter => {
+        counter.innerText = "0";
+
+        const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText.replace("+", ""); // Remove "+" for calculation
+            const increment = target / 100;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment) + "+"; // Append "+"
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.innerText = target + "+"; // Ensure final value has "+"
+            }
+        };
+
+        updateCounter();
+    });
+});

@@ -135,11 +135,11 @@ p,a{
 }
 .hand-img img{
     position: absolute;
-    bottom: -5%;
-    left: 72%;
+    bottom: -6%;
+    left: 80%;
     transform: translateX(-50%);
     z-index: 10000;
-    width: 600px;
+    width: 800px;
     background-size: contain;
 }
 /* Keyframes for random movement and slow rotation for each vector */
@@ -290,6 +290,20 @@ p,a{
    top: 8%;
    height: 320px;  
 }
+.about-vector img {
+    animation: slowRotate 20s linear infinite;
+}
+
+/* Rotation Animation */
+@keyframes slowRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(100deg);
+    }
+}
+
 .about-text-div{
     padding-left: 3rem;
 }
