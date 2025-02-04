@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const updateCounter = () => {
             const target = +counter.getAttribute("data-target");
             const count = +counter.innerText.replace("+", ""); // Remove "+" for calculation
-            const increment = target / 100;
+            const increment = target / 150; // Reduce increment to slow down animation
 
             if (count < target) {
                 counter.innerText = Math.ceil(count + increment) + "+"; // Append "+"
-                setTimeout(updateCounter, 20);
+                setTimeout(updateCounter, 60); // Increase timeout for slower animation
             } else {
                 counter.innerText = target + "+"; // Ensure final value has "+"
             }
@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCounter();
     });
 });
+
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".fade-down");
 

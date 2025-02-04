@@ -1077,7 +1077,7 @@ footer{
         display: block !important;
     }
     .landing-left {
-        height: 60vh !important;
+        height: 35rem !important;
         
     }
     .vector-2 {
@@ -1353,7 +1353,7 @@ footer{
     }
     .home-pro-card{
         border: 0;
-        margin: 0;
+        margin: 0 !important;
     }
     .home-pro-card img{
         width: 150px !important;
@@ -1368,10 +1368,14 @@ footer{
     }
     .home-pro-card p{
         font-weight: 400;
+        padding: 0 3rem !important;
         margin-bottom: .3rem;
         text-align: justify;
         font-size: 15px;
         color: #363636;
+    }
+    .home-pro-card a{
+        padding-left: 3rem;
     }
     .pro-prev, .pro-next {
         
@@ -1463,6 +1467,10 @@ footer{
     }
     .home-ser-card-text-div p{
         text-align: justify;
+        
+    }
+    .pro-slider{
+        padding: 1rem 0rem !important;
         
     }
   }
