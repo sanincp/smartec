@@ -29,6 +29,7 @@ p,a{
     transform: translateY(0);
 }
 .landing{
+    margin-top:-2.5px !important ;
     overflow: hidden !important;
     overflow-x: hidden !important;
 }
@@ -63,6 +64,11 @@ p,a{
     list-style: none;
     transition: transform 0.3s ease, color 0.3s ease;
 }
+.landing-right{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .lg-nav-right ul li:hover{
     transform: translateY(-5px); 
     color: #F58220;
@@ -72,20 +78,39 @@ p,a{
     border-radius: 50px;
     background: #F58220;
 }
-.nav-line{
-    width: 100%;
-    background:rgba(41, 66, 118, 0.12);
-    height: 1px;
-    margin-top: -1rem;
-    margin-left: 5px;
+.lg-nav-left-sec{
+    position:absolute;
+    right: 0 !important;
+}
+.lg-nav-left-sec ul{
+    z-index: 1000000 !important;
+    list-style: none;
+    margin-top: 5.4rem;
+    float: right !important;
+}
+.lg-nav-left-sec ul li{
+    font-size:18px;
+    padding: 5px 9px;
+    margin-right:1rem ;
+    color: #363636;
+    background: #fff;
+    border-radius: 7px;
     float: left;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
 }
-.landing-right{
-    margin-left: -1rem;
+.lg-nav-left-sec ul li:hover{
+    transform: translateY(-5px); 
+    color: #F58220;
 }
-.landing-right-bg{
-    width: auto;
-    height: 100vh;
+.nav-line{
+    width: 100vw !important;
+    opacity: 50%;
+    position: relative !important;
+    top: 10rem;
+    background:#f0f0f0;
+    height: 2.5px;
+    margin: auto !important;
 }
 .landing-text-body {
     position: relative;
@@ -457,13 +482,13 @@ p,a{
 .outer-ser-card{
     width: 350px !important;
     padding: 0 !important;
+    position: relative;
     border-radius: 55px;
     background: #ffffff;
     border: 1px solid rgba(35, 206, 246, 1);
     margin: auto;
     margin-top: 2rem;
-
-    height: 500px;
+    height: 550px;
 }
 .home-ser-card img{
     width:100%;
@@ -473,22 +498,50 @@ p,a{
 .ser-card-icon{
     float: left;
 }
-.home-ser-card-text-div{
-   margin: 1rem .5rem -1rem 2rem;
+.home-ser-card-text-div {
+    display: flex;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+    align-items: center;
+    justify-items: center;
+    margin-top: 1rem !important;
+    margin: auto;
 }
-.home-ser-card-text-div h3{
-    font-weight: 600;
-    font-size: 25px;
-    margin-left: 3rem !important;
-}
-.home-ser-card-text-div img{
+
+.home-ser-card-text-div img {
     width: 60px !important;
-    float: left !important;
-    border-radius: 0px !important;
-    margin-right: 1rem;
+    height: auto;
+    border-radius: 0 !important;
+    margin-right: .5rem;
+   
 }
-.home-ser-card-text-div p{
+
+.home-ser-card-text-div h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #294276;
+    margin: 0;
+}
+
+.home-ser-card p {
+    margin-top: 0.5rem;
+    font-size: 16px;
     text-align: left;
+    margin-left: 2rem;
+    margin-right: .5rem;
+    color: #666;
+    line-height: 1.6;
+}
+.home-ser-card a{
+    position: absolute;
+    margin-left: 2rem;
+    bottom: 2.5rem !important;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 7px;
+    background: #23cef6;
+    color: #ECFCFF;
 }
 /* Custom Dot Navigation */
 .dot-nav {
@@ -602,26 +655,36 @@ p,a{
 }
 .home-pro-card{
     flex: 1;
+    height: 400px;
     border-right:solid 1px #23cef6 ;
     padding: 0 20px;
+    margin-bottom: 1rem;
 }
 .home-pro-card img{
     width: 200px !important;
     padding-right: 1rem !important;
 }
 .home-pro-card h3{
-    font-size: 25px;
+    font-size: 22px;
+    margin-top: .5rem;
     font-weight: 600;
     color: #294276;
 }
 .home-pro-card p{
     font-weight: 400;
-    margin-bottom: .3rem;
+    margin-bottom: 1rem;
     color: #363636;
 }
 .home-pro-card a{
+    position: absolute;
+    bottom: 10px; 
+    padding: 5px 10px;
+    display: inline-block;
+    background: #23cef6;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
     font-weight: 500;
-    color: #23cef6;
     text-decoration: none;
 }
 /* Ensure container is properly positioned */
@@ -665,7 +728,9 @@ p,a{
 .project-card{
     text-align: center;
 }
+
 .project-card img{
+    border-radius: 30px;
     width: 350px;
 }
 .project-card h2{
@@ -696,11 +761,10 @@ p,a{
     height: 3px;
 }
 .certificate-card{
+    margin: auto;
     width: 300px !important;
     padding: 0 !important;
-    background: #ffffff;
-    margin: auto;
-    margin-bottom: 2rem !important;
+    margin-top: auto;
     height: 100%;
 }
 .client-slider img{
@@ -718,7 +782,7 @@ p,a{
     margin-bottom: 2rem;
     background: #fff;
     border-radius: 50px;
-    height: 250px;
+    height: 350px;
     width: 400px !important;
   }
 .testimonial-card img{
@@ -730,21 +794,19 @@ p,a{
 .testimonial-card h3{
     font-weight: 600;
     margin-left: 8rem !important;
-    padding-top: 3rem !important;
+    padding-top: 2.5rem !important;
 }
-.testimonial-card ul{
-    list-style: none;
-    margin-left: 6rem;
-    margin-top: -.3rem;
-}
-.testimonial-card ul li{
-    float: left;
-    color: #F58220;
+
+.testimonial-card h6{
+    margin-left: 8rem !important;
+    font-size: 14px !important;
+    color: #bbb;
+    margin-right: 1rem;
 }
 .testimonial-card p{
     float: left;
     margin-left: 2rem;
-    margin-top: 1rem;
+    margin-top: .5rem;
     font-weight: 300;
 }
 
@@ -756,47 +818,64 @@ p,a{
 }
 .home-blog-section h1{
     margin-top: 3rem;
-    margin-left: 10rem;
+    margin-left: 6rem;
     color: #294276;
     font-size: 50px;
     font-weight: 600;
 }
 .home-blog-section p{
-    margin-left: 10rem;
+    margin-left: 6rem;
     font-weight: 300;
     font-size: 18px;
     width: 80%;
     margin-bottom: 2rem;
 }
-.blog-card{
-    margin-left: 10rem;
+.blog-card {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 2rem; /* Space between image and text */
+    margin-left: 6rem;
 }
-.blog-card img{
-    float: left;
+
+.blog-card img {
     width: 250px;
-    margin-right: 2rem;
+    height: auto;
+    border-radius: 40px;
+    object-fit: cover;
 }
-.blog-right h4{
+
+.blog-right {
+    flex: 1; /* Takes remaining space */
+}
+
+.blog-right h4 {
     color: #294276;
     font-weight: 600;
 }
-.blog-right p{
+
+.blog-right p {
     color: #363636;
     font-size: 17px;
     font-weight: 300;
+    margin-left: 0;
+    width: 100%;
     margin-bottom: 1.5rem;
 }
-.blog-right .blog-btn{
+
+.blog-right .blog-btn {
     text-decoration: none;
     color: #363636;
     padding: 10px 20px;
     font-size: 18px;
     background: #23cef6;
     border-radius: 10px;
+    display: inline-block;
 }
-.blog-right .blog-btn:hover{
+
+.blog-right .blog-btn:hover {
     color: #fff;
 }
+
 .feedback-right{
     
     background: #23cef6;
@@ -836,6 +915,7 @@ p,a{
 }
 .home-query-form input::placeholder{
     font-size: 20px;
+    opacity: 30%;
     font-weight: 400;
 }
 .home-query-form textarea{
@@ -853,7 +933,7 @@ p,a{
 }
 .home-query-form textarea::placeholder{
     font-size: 20px;
-    
+    opacity: 30%;
     font-weight: 400;
 }
 .btn-submit{
@@ -872,6 +952,7 @@ p,a{
 footer{
     background: #294276;
     height: 100%;
+    margin-bottom: -1rem !important;
 }
 .footer-logo-sec img{
     width: 300px;
@@ -887,13 +968,13 @@ footer{
     list-style: none;
     color: #d9d9d9;
 }
-.footer-address-sec li p{
+.footer-address-sec ul li p{
     padding-left: 2rem;
 }
 .footer-address-sec li{
     margin-top: 1rem;
     font-size: 18px;
-    width: 80%;
+    width: 100%;
 }
 .footer-address-sec i{
     padding-right: 1rem;
@@ -1078,7 +1159,10 @@ footer{
     }
     .landing-left {
         height: 35rem !important;
-        
+    }
+    .landing-right{
+        height: 300px;
+        width: 100%;
     }
     .vector-2 {
         display: none;
@@ -1135,13 +1219,9 @@ footer{
         margin-bottom: 2rem;
         margin-top: 1.5rem;
     }
-    .landing-right-bg{
-        width: 100vh;
-        height: 300px;
-        background-size: contain;
-    }
-    .landing-right-bg img{
-        background-size: auto !important;
+    
+    .lg-nav-left-sec{
+        display: none;
     }
     .hand-img{
         position: relative;
@@ -1203,7 +1283,7 @@ footer{
         margin-top: 2rem;
         background: rgba(35, 215, 255, 1);
         height: 150px;
-        width: 400px;
+        width: 90vw;
         border-bottom-right-radius:130px ;
     }
     .q-right-div-sm h1{
@@ -1353,6 +1433,7 @@ footer{
         text-align: center;
     }
     .home-pro-card{
+        height: 100%;
         border: 0;
         margin: 0 !important;
     }
@@ -1376,7 +1457,18 @@ footer{
         color: #363636;
     }
     .home-pro-card a{
-        padding-left: 3rem;
+        position:relative;
+        margin-top: 1rem;
+        margin-left: 3rem;
+        bottom: 10px; 
+        padding: 5px 10px;
+        display: inline-block;
+        background: #23cef6;
+        color: white;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: 500;
+        text-decoration: none;
     }
     .pro-prev, .pro-next {
         
@@ -1420,6 +1512,7 @@ footer{
         margin-bottom: 2rem;
     }
     .blog-card{
+        display: inline-table;
         margin-left: 3rem;
     }
     .blog-card img{
@@ -1466,10 +1559,20 @@ footer{
         padding-bottom: 2rem;
         font-size: 18px;
     }
-    .home-ser-card-text-div p{
-        text-align: justify;
-        
+    .home-ser-card p {
+        margin-top: 0.5rem;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 0rem;
+        margin-right: .5rem;
+        color: #666;
+        line-height: 1.6;
     }
+    .testimonial-card{
+        margin: auto;
+        
+        width:90% !important;
+      }
     .pro-slider{
         padding: 1rem 0rem !important;
         

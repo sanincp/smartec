@@ -1069,14 +1069,7 @@ footer{
         margin-bottom: 2rem;
         margin-top: 1.5rem;
     }
-    .landing-right-bg{
-        width: 100vh;
-        height: 300px;
-        background-size: contain;
-    }
-    .landing-right-bg img{
-        background-size: auto !important;
-    }
+    
     .hand-img{
         position: relative;
         top: 110% !important;
