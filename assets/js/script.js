@@ -81,25 +81,42 @@ document.querySelectorAll(".jk-nav-link").forEach(n => n.addEventListener("click
 document.addEventListener("DOMContentLoaded", function () {
     const counters = document.querySelectorAll(".counter");
 
-    counters.forEach(counter => {
+    const startCounter = (counter) => {
         counter.innerText = "0";
+        const target = +counter.getAttribute("data-target");
+        const increment = target / 150; 
 
         const updateCounter = () => {
-            const target = +counter.getAttribute("data-target");
-            const count = +counter.innerText.replace("+", ""); // Remove "+" for calculation
-            const increment = target / 150; // Reduce increment to slow down animation
+            const count = +counter.innerText.replace("+", ""); 
 
             if (count < target) {
-                counter.innerText = Math.ceil(count + increment) + "+"; // Append "+"
-                setTimeout(updateCounter, 60); // Increase timeout for slower animation
+                counter.innerText = Math.ceil(count + increment) + "+"; 
+                setTimeout(updateCounter, 60); 
             } else {
-                counter.innerText = target + "+"; // Ensure final value has "+"
+                counter.innerText = target + "+"; 
             }
         };
 
         updateCounter();
-    });
+    };
+
+    const options = {
+        root: null, 
+        threshold: 0.5, // 50% of the counter section must be visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounter(entry.target);
+                observer.unobserve(entry.target); // Stop observing after animation starts
+            }
+        });
+    }, options);
+
+    counters.forEach(counter => observer.observe(counter));
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll(".fade-down");

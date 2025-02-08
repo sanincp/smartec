@@ -442,8 +442,36 @@ p,a{
     font-size: 40px;
     font-weight: 600;
 }
-.our-client-bottom img{
-    width: 400px;
+.custom-table img{
+    height:100%;
+    width: 100px;
+}
+.custom-table {
+    width:450px;
+    height: 500px;
+    border-collapse: collapse !important;
+    border: none;
+}
+ table, tr, td {
+    border: none !important;
+}
+.custom-table td {
+    text-align: center;
+    padding: .5rem .5rem ;
+    border: 1px solid #ccc;
+}
+
+/* Alternating background colors */
+.custom-table tr:nth-child(odd) td:nth-child(odd) { background: #f2f2f3; }
+.custom-table tr:nth-child(odd) td:nth-child(even) { background: #ffff; }
+.custom-table tr:nth-child(even) td:nth-child(odd) { background: #ffff; }
+.custom-table tr:nth-child(even) td:nth-child(even) { background: #f2f2f3; }
+
+/* Image Styling */
+.table-img {
+    width: 10px;
+    height: 10px;
+    object-fit: cover;
 }
 .ser-slider{
     display: flex;
@@ -727,6 +755,8 @@ p,a{
 }
 .project-card{
     text-align: center;
+    height: 600px;
+    position: relative;
 }
 
 .project-card img{
@@ -736,22 +766,29 @@ p,a{
 .project-card h2{
     color: #294276;
     font-weight: 600;
-    font-size: 30px;
-    margin-top: 1rem;
+    font-size: 27px;
+    margin-top: 2rem;
 }
 .project-card p{
     color: #363636;
     font-weight: 400;
-    width: 95%;
+    width: 90%;
+    margin: auto;
     font-size: 16px;
     margin-top: 1rem;
     margin-bottom: .5rem;
 }
 .project-card a{
+    position: absolute;
+    bottom: 00px; /* Adjust spacing from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     font-weight: 500;
     font-size: 20px;
     color: #23cef6;
     text-decoration: none;
+    padding: 10px 15px;
 }
 .project-line{
     background: rgb(203, 202, 202);
@@ -877,7 +914,7 @@ p,a{
 }
 
 .feedback-right{
-    
+    padding: 3rem  0 !important;
     background: #23cef6;
 }
 .feedback-right h2{
@@ -950,9 +987,8 @@ p,a{
     color: #23cef6;
 }
 footer{
+    height: fit-content;
     background: #294276;
-    height: 100%;
-    margin-bottom: -1rem !important;
 }
 .footer-logo-sec img{
     width: 300px;
@@ -1002,6 +1038,44 @@ footer{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.Copyright-p {
+    font-size: 18px;
+    color: #d9d9d9;
+}
+
+.footer-social-icons {
+    list-style: none;
+    display: flex;
+    margin-right: 7rem !important;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social-icons li {
+    display: inline-block;
+    padding: 6px 9px;
+    border-radius: 7px;
+    background: #d9d9d9;
+}
+
+.footer-social-icons a {
+    text-decoration: none;
+    color: #294276;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-social-icons a:hover {
+    color: #F58220;
+}
+
 .Copyright-p{
     margin-left: 7rem;
     padding-bottom: 2rem;
@@ -1076,7 +1150,6 @@ footer{
     background-color: #ffff;
     width: 100%;
     height: 100vh;
-    text-align: center;
     transition: 750ms;
   }
   
@@ -1121,7 +1194,6 @@ footer{
   .jk-hamburger.active .jk-bar:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
   }
-  
   @media (min-width: 768px) {
     .jk-nav-menu {
       position: static;
@@ -1300,8 +1372,9 @@ footer{
         color: rgba(41, 66, 118, 1);
         font-weight: 600;
         padding-top: 0rem;
+        padding-right: 2rem;
         padding-left: 2rem;
-        font-size: 22px;
+        font-size: 20px;
     }
     .section-2-2{
         padding-left: 0;
@@ -1337,11 +1410,17 @@ footer{
         padding-left: 3rem;
         font-size: 30px;
     }
-    .our-client-bottom img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 350px;
+    .custom-table{
+        margin: auto;
+    }
+    .custom-table img{
+        padding: 0;
+        height: fit-content;
+    }
+    .custom-table .table-row {
+        width: 300px !important;
+        margin: 0 3rem !important;
+
     }
     .home-service-section h1{
         padding-top: 1rem;
@@ -1396,6 +1475,9 @@ footer{
         width: 80% !important;
         margin-left: 3rem;
         height: 1.5px;
+      }
+      .wired-div{
+        margin-right: 1rem !important;
       }
       .wired-div img{
         width: 350px;
@@ -1481,17 +1563,30 @@ footer{
     }
     .project-card {
         margin-bottom: 2rem;
+        height: 100%;
     }
     .project-card h2{
         color: #294276;
         font-weight: 600;
-        font-size: 22px;
+        font-size: 20px;
+        width: 90%;
+        margin: auto;
         margin-top: 1rem;
     }
     .project-card p{
         width: 80%;
         margin: auto;
         font-size: 15px;
+        margin-bottom: 1rem;
+    }
+    .project-card a{
+        position: static;
+        align-items: center;
+        text-align: center;
+    }
+    .feedback-right{
+        padding: 0rem  0 !important;
+        background: #23cef6;
     }
     .home-blog-section h1{
         margin-top: 2rem !important;
@@ -1556,7 +1651,7 @@ footer{
     .Copyright-p{
         text-align: center !important;
         margin-left: 0;
-        padding-bottom: 2rem;
+        padding-bottom: 0rem;
         font-size: 18px;
     }
     .home-ser-card p {
@@ -1576,5 +1671,21 @@ footer{
     .pro-slider{
         padding: 1rem 0rem !important;
         
+    }
+    .nav-line{
+        display: none;
+    }
+    .footer-bottom {
+        display: block;
+        padding-bottom: 2rem;
+    }
+    
+    .footer-social-icons {
+        list-style: none;
+        margin: auto !important;
+        padding: auto !important;
+      
+        justify-content: center;
+        gap: 15px;
     }
   }
