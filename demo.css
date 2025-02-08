@@ -444,11 +444,11 @@ p,a{
 }
 .custom-table img{
     height:100%;
-    width: 100px;
+    width: 90px;
 }
 .custom-table {
-    width:450px;
-    height: 500px;
+    width: 80%;
+    margin: auto !important;
     border-collapse: collapse !important;
     border: none;
 }
@@ -585,7 +585,7 @@ p,a{
     display: inline-block;
     margin: 5px;
     margin-top: 1rem;
-    transition: 0.3s ease-in-out;
+    transition: 5ms ease-in-out;
     cursor: pointer;
 }
 
@@ -1296,6 +1296,7 @@ footer{
         display: none;
     }
     .hand-img{
+        border: 0 !important;
         position: relative;
         top: 110% !important;
         left: 55%;
@@ -1304,6 +1305,7 @@ footer{
         background-size: contain;
     }
     .hand-img img{
+        border: 0 !important;
         width: 550px !important;
     }
     .home-about{
@@ -1374,7 +1376,7 @@ footer{
         padding-top: 0rem;
         padding-right: 2rem;
         padding-left: 2rem;
-        font-size: 20px;
+        font-size: 19px;
     }
     .section-2-2{
         padding-left: 0;
@@ -1410,17 +1412,16 @@ footer{
         padding-left: 3rem;
         font-size: 30px;
     }
-    .custom-table{
-        margin: auto;
+    .custom-table {
+        width: 80%;
+        margin: auto !important;
+        border-collapse: collapse !important;
+        border: none;
     }
     .custom-table img{
         padding: 0;
+        width: 80px;
         height: fit-content;
-    }
-    .custom-table .table-row {
-        width: 300px !important;
-        margin: 0 3rem !important;
-
     }
     .home-service-section h1{
         padding-top: 1rem;
@@ -1480,7 +1481,7 @@ footer{
         margin-right: 1rem !important;
       }
       .wired-div img{
-        width: 350px;
+        width: 80%;
         margin-left: 3em;
         margin-top: 1rem;
         margin-right: 1rem;
@@ -1498,7 +1499,7 @@ footer{
         margin-bottom: 2rem;
       }
       .wireless-imgs img{
-        width: 90px;
+        width: 80px;
       }
       .section-title-common{
         padding-top: 2rem;
@@ -1532,7 +1533,7 @@ footer{
     }
     .home-pro-card p{
         font-weight: 400;
-        padding: 0 3rem !important;
+        padding: 0 1.2rem !important;
         margin-bottom: .3rem;
         text-align: justify;
         font-size: 15px;
@@ -1541,7 +1542,7 @@ footer{
     .home-pro-card a{
         position:relative;
         margin-top: 1rem;
-        margin-left: 3rem;
+        margin-left: 1.2rem;
         bottom: 10px; 
         padding: 5px 10px;
         display: inline-block;
@@ -1551,6 +1552,13 @@ footer{
         border-radius: 5px;
         font-weight: 500;
         text-decoration: none;
+    }
+    .pro-prev {
+        left: 5px; /* Adjust if needed */
+    }
+    
+    .pro-next {
+        right: 5px; /* Adjust if needed */
     }
     .pro-prev, .pro-next {
         
@@ -1627,6 +1635,14 @@ footer{
         font-weight: 300;
         width: 90%;
         margin-bottom: 1.5rem;
+    }.blog-right .blog-btn {
+        text-decoration: none;
+        color: #363636;
+        padding: 7px 12px;
+        font-size: 15px;
+        background: #23cef6;
+        border-radius: 10px;
+        display: inline-block;
     }
     .footer-logo-sec img{
         width: 200px;
