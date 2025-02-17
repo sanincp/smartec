@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const handImages = [
         "assets/images/base/tablet-in-hand-1.png",
-        "assets/images/base/tablet-in-hand.png",
-        "assets/images/base/tablet-in-hand.png",
-        "assets/images/base/tablet-in-hand.png",
-        "assets/images/base/tablet-in-hand.png"
+        "assets/images/base/tablet-in-hand-2.png",
+        "assets/images/base/tablet-in-hand-3.png",
+        "assets/images/base/tablet-in-hand-4.png",
+        "assets/images/base/tablet-in-hand-5.png"
     ];
     const bgImages = [
         "assets/images/base/slide-1.png",
