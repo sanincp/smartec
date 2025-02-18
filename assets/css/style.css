@@ -61,7 +61,7 @@ p,a{
     font-size:18px;
     font-weight: 500;
     color: #363636;
-    padding: .25rem 1rem;
+    padding: .25rem .25rem;
     list-style: none;
     transition: transform 0.3s ease, color 0.3s ease;
 }
