@@ -1224,6 +1224,7 @@ select {
   transition: 0.4s;
 }
 .header-wrap.sticky {
+  height: 100px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: 0.4s;
   background-color: #fff;
@@ -1270,7 +1271,7 @@ select {
   font-size: 11px;
 }
 .header-wrap .header-bottom {
-  margin-top: 0px;
+  margin-top: -10px;
   padding: 40px 0;
 }
 .header-wrap .header-bottom .header-bottom-right .searchbox button {
