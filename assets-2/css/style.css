@@ -1462,7 +1462,7 @@ select {
     color: #10012A;
   }
   .header-wrap .logo img {
-    max-width: 120px;
+    max-width: 200px;
   }
   .header-wrap.style1 .header-top .header-top-left .contact-item i,
   .header-wrap.style1 .header-top .header-top-right .user-login i,
@@ -3282,7 +3282,7 @@ select {
   color: #10012A;
 }
 .service-card.style2:hover .service-info {
-  background-color: #D80758;
+  background-color: #294276;
 }
 .service-card.style2:hover .service-info .service-blur-icon i {
   opacity: 0.15;
@@ -3308,12 +3308,17 @@ select {
 }
 .service-card.style3 .service-icon {
   margin-top: -50px;
-  border-radius: 4px;
+  border-radius: 10px;
   transition: 0.4s;
 }
 .service-card.style3 .service-info {
-  border-radius: 5px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
   transition: 0.4s;
+}
+.service-card.style3 img{
+  border-top-left-radius:30px ;
+  border-top-right-radius:30px ;
 }
 .service-card.style3 .service-info h3 a {
   transition: 0.4s;
@@ -3334,7 +3339,7 @@ select {
   color: #10012A;
 }
 .service-card.style3:hover .service-info {
-  background-color: #D80758;
+  background-color: #294276;
 }
 .service-card.style3:hover .service-info .service-blur-icon i {
   opacity: 0.15;
@@ -3776,14 +3781,14 @@ select {
 }
 
 .project-gallery .single-project-img {
-  border-radius: 5px;
+  border-radius: 20px;
   margin-bottom: 25px;
 }
 .project-gallery .single-project-img a {
   display: block;
 }
 .project-gallery .single-project-img a img {
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 /*-------------------------------
@@ -5069,7 +5074,7 @@ select {
     FAQ  CSS
 ------------------------------*/
 .accordion-button:not(.collapsed) span {
-  background: #D80758 !important;
+  background: #F58220 !important;
 }
 
 .accordion-button:not(.collapsed) span i.plus {
@@ -5101,7 +5106,7 @@ select {
   border: none;
   padding-right: 65px;
   transition: 0.4s;
-  background-color: #F9F9F9;
+  background-color: #eefcff;
 }
 .accordion-item .accordion-header .accordion-button:after {
   display: none;
@@ -5114,7 +5119,7 @@ select {
   color: #000;
 }
 .accordion-item .accordion-header .accordion-button.collapsed span {
-  background-color: #10012A !important;
+  background-color: #294276 !important;
 }
 .accordion-item .accordion-header .accordion-button span {
   min-width: 60px;
@@ -5155,7 +5160,7 @@ select {
 .accordion-body {
   border: none;
   padding: 20px 20px 20px;
-  background: #F9F9F9;
+  background: #eefcff;
 }
 .accordion-body p {
   margin: 0;
@@ -5331,7 +5336,7 @@ article .content-feature-list {
   font-weight: 500;
 }
 .post-img img {
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 .post-title {

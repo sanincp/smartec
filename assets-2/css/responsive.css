@@ -41,6 +41,12 @@
   }
 }
 @media only screen and (max-width: 767px) {
+  .header-wrap .header-bottom {
+    margin-top: -30px;
+  }
+  .header-wrap.sticky{
+    height: 70px;
+  }
   .sm-none {
     display: none !important;
   }
