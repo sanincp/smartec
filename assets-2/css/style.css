@@ -796,7 +796,7 @@ select {
 .section-title span,
 .content-title span {
   display: block;
-  font-size: 18px;
+  font-size: 23px !important;
   font-weight: 500;
   line-height: 1;
   margin: 0 0 8px;
@@ -861,7 +861,7 @@ select {
 }
 
 .bg-razz {
-  background-color: #D80758;
+  background-color: #23cef6;
 }
 
 .body_overlay {
@@ -2264,7 +2264,7 @@ select {
   color: #000;
 }
 .new-product-item .new-product-info span {
-  color: #D80758;
+  color: #F58220;
   font-size: 14px;
   font-weight: 600;
 }
@@ -3199,6 +3199,8 @@ select {
 }
 .service-card .service-info {
   background-color: #eefcff;
+  border-bottom-left-radius:10px ;
+  border-bottom-right-radius:10px ;
   padding: 25px 25px 25px;
   position: relative;
 }
@@ -3640,16 +3642,18 @@ select {
   color: #000;
 }
 .case-card.style1 .case-img {
-  border-radius: 5px;
+  border-radius: 30px;
 }
 .case-card.style1 .case-img img {
   border-radius: 5px;
 }
 .case-card.style1 .case-img .case-info-wrap {
-  border-radius: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .case-card.style1 .case-img .case-info-wrap:after {
-  border-radius: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 .case-card.style1 .case-img .case-info-wrap .read-more {
   border-radius: 5px;
@@ -3719,9 +3723,12 @@ select {
 .single-case-1 {
   background-image: url(../img/case/case-details.jpg);
   height: 540px;
-  border-radius: 5px;
+  border-radius: 30px;
   margin-bottom: 25px;
   display: block;
+}
+.single-case-1 img{
+  border-radius: 30px !important;
 }
 
 .project-details-wrap .post-navigation {
@@ -3736,6 +3743,7 @@ select {
   border-radius: 5px;
 }
 .project-desc h2 {
+  color: #294276;
   margin-bottom: 15px;
   font-size: 26px;
 }
@@ -3777,6 +3785,7 @@ select {
 }
 .project-desc-para h3 {
   font-size: 26px;
+  color: #294276;
   line-height: 1.2;
   margin-bottom: 15px;
 }
@@ -4632,7 +4641,7 @@ select {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 2px solid transparent;
+  border: 2px solid #23cef6;
   transform: scale(0.8);
   transition: 0.4s;
   cursor: pointer;
@@ -5542,6 +5551,10 @@ article .content-feature-list {
 }
 .post-comment-wrap .comment-item .comment-author_img {
   width: 75px;
+  border-radius: 100%;
+}
+.post-comment-wrap .comment-item .comment-author_img img{
+  border-radius: 100%;
 }
 .post-comment-wrap .comment-item .comment-author_text {
   width: calc(100% - 95px);
@@ -5825,9 +5838,10 @@ article .content-feature-list {
 .product-card .product-img {
   position: relative;
   padding: 20px;
+  background: #eefcff;
   border: 1px solid #EEEFF2;
   border-bottom: none;
-  border-radius: 5px 5px 0 0;
+  border-radius: 30px 30px 0 0;
 }
 .product-card .product-img img {
   max-width: 80%;
@@ -5845,15 +5859,16 @@ article .content-feature-list {
   color: #fff;
 }
 .product-card .product-info {
-  background-color: #F9F9F9;
+  background-color: #294276;
   padding: 22px 25px 25px;
-  border-radius: 0 0 5px 5px;
+  border-radius: 0 0 30px 30px;
   transition: 0.4s;
 }
 .product-card .product-info .product-info-left {
   width: 80%;
 }
-.product-card .product-info .product-info-left h4 {
+.product-card .product-info .product-info-left h4 a{
+  color: #fff;
   font-size: 22px;
   line-height: 1.2;
   margin: 0 0 10px;
@@ -5862,10 +5877,11 @@ article .content-feature-list {
 .product-card .product-info .product-info-left .product-price {
   transition: 0.4s;
   font-weight: 500;
+  color: #23cef6;
   display: block;
 }
 .product-card .product-info .product-info-left .ratings {
-  color: #FEBF08;
+  color: #F58220;
   text-align: left;
   display: block;
   margin: 10px 0 0;
@@ -5887,7 +5903,7 @@ article .content-feature-list {
   border-radius: 50%;
   text-align: center;
   border: none;
-  background: #10012A;
+  background: #294276;
   display: none;
   position: absolute;
   bottom: 0;
@@ -5907,7 +5923,7 @@ article .content-feature-list {
   margin: 0 auto;
 }
 .product-card .product-info:hover {
-  background-color: #D80758;
+  background-color: #23cef6;
 }
 .product-card .product-info:hover .product-info-left h4 a {
   color: #fff;
@@ -5930,7 +5946,8 @@ article .content-feature-list {
          Shop Details CSS
 -------------------------------*/
 .single-product-gallery .gallery-top {
-  border: 1px solid #EEEFF2;
+  border: 1px solid #23cef6;
+  border-radius: 20px;
   margin-bottom: 20px;
   padding: 20px;
 }
@@ -5938,7 +5955,8 @@ article .content-feature-list {
   background-color: #F9F9F9;
 }
 .single-product-gallery .gallery-thumbs .product-thumb {
-  border: 1px solid #EEEFF2;
+  border: 1px solid #23cef6;
+  border-radius: 10px;
   padding: 20px;
   cursor: pointer;
 }
@@ -5948,6 +5966,7 @@ article .content-feature-list {
 }
 .single-product-details .single-product-title h2 {
   font-size: 30px;
+  color: #294276;
   font-weight: 700;
   line-height: 1;
   margin: 0 0 13px;
