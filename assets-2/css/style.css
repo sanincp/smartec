@@ -3070,6 +3070,104 @@ select {
   right: 0;
   z-index: 1;
 }
+/*-- Feature --*/
+.feature-area {
+  background-color: #294276;
+  position: relative;
+  overflow: hidden;
+}
+.feature-area .feature-img {
+  position: relative;
+  background-image: url("../img/hero/hero-slider-11.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.feature-area .feature-img:before {
+  position: absolute;
+  content: "";
+  right: -170px;
+  top: -70px;
+  width: 285px;
+  height: 700px;
+  background-color: #294276;
+  transform: rotate(-19deg);
+}
+.feature-area .feature-img img {
+  display: none;
+}
+.feature-area .feature-shape img {
+  position: absolute;
+  right: 65px;
+  bottom: 0;
+  opacity: 0.1;
+  animation: process-type 25s infinite linear;
+  z-index: 1;
+}
+.feature-area .feature-content {
+  max-width: 100%;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  position: relative;
+  z-index: 1;
+}
+.feature-area .feature-content h2 {
+  font-weight: 600;
+  font-size: 38px;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+.feature-area .feature-content ul {
+  margin: 0;
+  padding: 0;
+}
+.feature-area .feature-content ul li {
+  list-style-type: none;
+  display: block;
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 40px;
+}
+.feature-area .feature-content ul li:nth-child(1) {
+  margin-left: 50px;
+}
+.feature-area .feature-content ul li:nth-child(2) {
+  margin-left: 100px;
+}
+.feature-area .feature-content ul li:nth-child(3) {
+  margin-bottom: 0;
+  margin-left: 150px;
+}
+.feature-area .feature-content ul li i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 27px;
+  color: #ffff;
+  background-color: #23cef6;
+  border-radius: 10px;
+}
+.feature-area .feature-content ul li h3 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+.feature-area .feature-content ul li p {
+  margin-bottom: 0;
+  color: #aeadad;
+  font-size: 14px;
+  max-width: 380px;
+}
+
+/*-- End Feature --*/
 .about-wrap.style2 .about-content .btn.style1 {
   border-radius: 0;
 }
@@ -3662,7 +3760,7 @@ select {
   color: #fff;
 }
 .case-card.style3 .case-img {
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .case-card.style3 .case-img img {
   border-radius: 5px;
@@ -3789,7 +3887,6 @@ select {
   line-height: 1.2;
   margin-bottom: 15px;
 }
-
 .project-gallery .single-project-img {
   border-radius: 20px;
   margin-bottom: 25px;
@@ -4487,6 +4584,9 @@ select {
   border-radius: 30px;
   position: relative;
   transition: 0.3s;
+}
+.light-blue-bg{
+  background: #f4fdfe !important;
 }
 .testimonial-item.style1 .quote-icon {
   position: absolute;
