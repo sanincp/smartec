@@ -95,13 +95,13 @@ p,a{
     position:absolute;
     right: 0 !important;
 }
-.lg-nav-left-sec ul{
+.lg-nav-left-sec .lg-nav-right-icons{
     z-index: 1000000 !important;
     list-style: none;
     margin-top: 5.4rem;
     float: right !important;
 }
-.lg-nav-left-sec ul li{
+.lg-nav-left-sec .lg-nav-right-icons li{
     font-size:18px;
     padding: 5px 9px;
     margin-right:1rem ;
@@ -112,7 +112,7 @@ p,a{
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 }
-.lg-nav-left-sec ul li:hover{
+.lg-nav-left-sec .lg-nav-right-icons li:hover{
     transform: translateY(-5px); 
     color: #F58220;
 }

@@ -171,6 +171,50 @@
     height: 350px;
     background-position: top;
   }
+
+  .feature-area {
+    background-color: #294276;
+    position: relative;
+    overflow: hidden;
+  }
+  .feature-area .feature-img {
+    background-image: unset;
+  }
+  .feature-area .feature-img:before {
+    display: none;
+  }
+  .feature-area .feature-img img {
+    display: block;
+  }
+  .feature-area .feature-shape img {
+    right: 0;
+  }
+  .feature-area .feature-content {
+    max-width: 100%;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .feature-area .feature-content h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .feature-area .feature-content ul li {
+    margin-bottom: 40px;
+  }
+  .feature-area .feature-content ul li:nth-child(1) {
+    margin-left: 0;
+  }
+  .feature-area .feature-content ul li:nth-child(2) {
+    margin-left: 0;
+  }
+  .feature-area .feature-content ul li:nth-child(3) {
+    margin-left: 0;
+  }
+  .review-area {
+    text-align: center;
+  }
   .category-card {
     padding: 20px 20px 18px;
   }
