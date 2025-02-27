@@ -93,7 +93,6 @@ p,a{
 }
 .lg-nav-left-sec{
     position:absolute;
-    right: 0 !important;
 }
 .lg-nav-left-sec .lg-nav-right-icons{
     z-index: 1000000 !important;
@@ -115,6 +114,97 @@ p,a{
 .lg-nav-left-sec .lg-nav-right-icons li:hover{
     transform: translateY(-5px); 
     color: #F58220;
+}
+.lg-nav-left-sec .nav-left-overflow{
+    z-index: 1000000 !important;
+    list-style: none;
+    margin-top: 5.5rem;
+    float: left !important;
+}
+.lg-nav-left-sec .nav-left-overflow li{
+    float: left;
+}
+.lg-nav-left-sec .nav-left-overflow li a{
+    font-size:18px;
+    padding: 4px 15px;
+    margin-right:1rem ;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(41, 66, 118, 1);
+    border-radius: 20px;
+    float: left;
+    left: 0 !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.lg-nav-left-sec .nav-left-overflow li a:hover{
+    transform: translateY(-5px); 
+    color: #F58220;
+}
+/* Dropdown Menu */
+.lg-nav-right ul li {
+    position: relative;
+}
+
+/* First Level Dropdown */
+.dropdown-menu {
+    position: relative;
+    left: 0;
+    z-index: 10000000 !important;
+    top: 100%;
+    background: #fff;
+    border-radius: 8px;
+    min-width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu li {
+    display: block;
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    display: block;
+    font-size: 14px;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.dropdown-menu li:hover {
+    background: #f58220;
+}
+
+.dropdown-menu li a:hover {
+    color: #fff;
+}
+
+/* Submenu (Second Level) */
+.dropdown-sub {
+    position: relative;
+}
+
+.dropdown-submenu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: #fff;
+    border-radius: 8px;
+    min-width: 200px;
+    padding: 10px 0;
+    display: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-sub:hover .dropdown-submenu {
+    display: block;
+}
+
+/* Show dropdown on hover */
+.lg-nav-right ul .dropdown:hover .dropdown-menu {
+    display: block;
 }
 .nav-line{
     width: 100vw !important;
@@ -1006,6 +1096,7 @@ p,a{
 }
 footer{
     height: fit-content;
+    
     background: #294276;
 }
 .footer-logo-sec img{

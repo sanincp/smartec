@@ -22,20 +22,66 @@
                 <div class="landing-left col-lg-8 col-sm-12">
                     <div class="lg-nav">
                         <div class="lg-nav-left">
-                            <img src="assets/images/logo/logo.png" alt="">
+                            <img src="assets/images/logo/logo.png" alt="Logo">
                         </div>
                         <div class="lg-nav-right">
                             <ul>
-                                <li><a class="nav-lg-active nav-lg-li-a" href="index.html">Home</a></li>
+                                <li><a class="nav-lg-li-a" href="index.html">Home</a></li>
                                 <li><a class="nav-lg-li-a" href="about.html">About</a></li>
-                                <li><a class="nav-lg-li-a" href="solutions.html">Solutions</a></li>
-                                <li><a class="nav-lg-li-a" href="projects.html">Projects</a></li>
-                                <li><a class="nav-lg-li-a" href="blog.html">Blog</a></li>
+                                
+                                <!-- Services Dropdown -->
+                                <li class="dropdown">
+                                    <a class="nav-lg-li-a" href="solutions.html">Services</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Web Development</a></li>
+                                        <li><a href="#">App Development</a></li>
+                                        <li class="dropdown-sub">
+                                            <a href="#">More Services ▸</a>
+                                            <ul class="dropdown-submenu">
+                                                <li><a href="#">SEO Optimization</a></li>
+                                                <li><a href="#">Cloud Solutions</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                    
+                                <!-- Solutions Dropdown -->
+                                <li class="dropdown">
+                                    <a class="nav-lg-li-a" href="projects.html">Solutions</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Business Solutions</a></li>
+                                        <li><a href="#">E-commerce Solutions</a></li>
+                                        <li class="dropdown-sub">
+                                            <a href="#">More Solutions ▸</a>
+                                            <ul class="dropdown-submenu">
+                                                <li><a href="#">ERP Solutions</a></li>
+                                                <li><a href="#">CRM Development</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                    
+                                <!-- Projects Dropdown -->
+                                <li class="dropdown">
+                                    <a class="nav-lg-li-a" href="blog.html">Projects</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Recent Projects</a></li>
+                                        <li><a href="#">Ongoing Projects</a></li>
+                                        <li class="dropdown-sub">
+                                            <a href="#">More Projects ▸</a>
+                                            <ul class="dropdown-submenu">
+                                                <li><a href="#">AI & ML Projects</a></li>
+                                                <li><a href="#">Blockchain Projects</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                    
                                 <li><a class="nav-lg-li-a" href="contact.html">Contact</a></li>
                             </ul>
                         </div>
-                        
                     </div>
+                    
                     <header>
                         <div class="jk-container">
                         <nav class="jk-nav-bar">
@@ -124,8 +170,9 @@
             
                 <div class="col-lg-4 landing-right col-sm-12" style="background-image: url(/assets/images/base/Untitled\ design.png);">
                     <div class="lg-nav-left-sec">
-                        <ul class="nav-left-overfloww">
-                           <a href="products.html">Products</a>
+                        <ul class="nav-left-overflow">
+                            <li><a href="products.html">Brands</a></li>
+                            <li><a href="products.html">Contacts</a></li>
                         </ul>
                         <ul class="lg-nav-right-icons">
                             <a href="https://www.instagram.com/smartecinnovation/"><li><i class="bi bi-instagram"></i></li></a>
@@ -643,7 +690,7 @@
         </div>
     </section>
     <footer >
-        <div class="row d-flex justify-content-around pt-5 mb-0  pb-0">
+        <div class="row d-flex justify-content-evenly pt-5 mb-0  pb-0">
             <div class="col-lg-3 footer-logo-sec">
                 <img src="assets/images/logo/footer logo.png" alt="">
                 <p>We transform IT processes to prioritize business growth and continuity with innovative
