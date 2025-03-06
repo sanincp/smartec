@@ -6866,3 +6866,64 @@ background: #294276;
 .logogrid__img:hover {
   filter: grayscale(0) contrast(100%);
 }
+/*-- Skills --*/
+.skills-area .skills-img {
+  background-image: url("../img/about/about-img-4.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.skills-area .skills-img img {
+  display: none;
+}
+.skills-area .skills-content {
+  padding: 70px 70px 70px;
+  position: relative;
+  background-color: #294276;
+}
+.skills-area .skills-content .section-title {
+  margin-bottom: 30px;
+}
+.skills-area .skills-content .section-title .sub-title {
+  color: #fff;
+}
+.skills-area .skills-content .section-title .sub-title:before {
+  background-color: #fff;
+}
+.skills-area .skills-content .section-title .sub-title:after {
+  background-color: #00245a;
+}
+.skills-area .skills-content .section-title h2 {
+  color: #fff;
+}
+.skills-area .skills-content ul li {
+  list-style-type: none;
+  display: block;
+  position: relative;
+  padding-left: 75px;
+  margin-bottom: 25px;
+}
+.skills-area .skills-content ul li:last-child {
+  margin-bottom: 0;
+}
+.skills-area .skills-content ul li i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  color: #fff;
+  font-size: 55px;
+  line-height: 70px;
+}
+.skills-area .skills-content ul li h3 {
+  margin-bottom: 5px;
+  color: #fff;
+  font-size: 22px;
+}
+.skills-area .skills-content ul li p {
+  margin-bottom: 0;
+  color: #fff;
+  max-width: 475px;
+}
