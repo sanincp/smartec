@@ -76,7 +76,7 @@ p,a{
     text-decoration: none !important;
     color: #363636 !important;
     padding: 5px 15px !important;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     display: block;
     transition: 0.3s ease-in-out;
@@ -200,7 +200,7 @@ p,a{
     float: left;
 }
 .lg-nav-left-sec .nav-left-overflow li a{
-    font-size:15px;
+    font-size:16px;
     padding: 4px 15px;
     margin-right:1rem ;
     color: #363636;
