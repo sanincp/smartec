@@ -176,7 +176,7 @@ p,a{
     float: right !important;
 }
 .lg-nav-left-sec .lg-nav-right-icons li{
-    font-size:18px;
+    font-size:15px;
     padding: 5px 9px;
     margin-right:1rem ;
     color: #363636;
@@ -200,7 +200,7 @@ p,a{
     float: left;
 }
 .lg-nav-left-sec .nav-left-overflow li a{
-    font-size:18px;
+    font-size:15px;
     padding: 4px 15px;
     margin-right:1rem ;
     color: #363636;
